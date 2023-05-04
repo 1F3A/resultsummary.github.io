@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'HankenGrotesk';
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf'),
+        url('./assets/fonts/static/HankenGrotesk-Bold.ttf'),
+        url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf'),
+        url('./assets/fonts/static/HankenGrotesk-Medium.ttf');
+}
+
+:root {
+    /* Primary */
+    --light-red: hsla(0, 100%, 67%, 0.4);
+    --orangey-yellow: hsla(39, 100%, 56%, 0.4);
+    --green-teal: hsla(166, 100%, 37%, 0.4);
+    --cobalt-blue: hsla(234, 85%, 45%, 0.4);
+
+    /* Gradient */
+
+    /* (background) */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+
+    /* circle */
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* typography */
+    --p-font: 18px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    box-shadow: 4px 1px 10px 7px rgba(207,197,197,0.77);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    color: var(--white);
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.result {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result p {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.result span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.result-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.result-text h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.result-text p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--light-lavender);
+    margin-top: 15px;
+}
+
+.card-right {
+    flex-basis: 50%;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card-right h3 {
+    color: var(--dark-gray-blue);
+}
+
+.result-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.result-list li:nth-child(1) {
+    background: var(--light-red);
+    color: hsl(0, 100%, 67%);
+}
+.result-list li:nth-child(2) {
+    background: var(--orangey-yellow);
+    color: hsl(39, 100%, 56%);
+}
+.result-list li:nth-child(3) {
+    background: var(--green-teal);
+    color: hsl(166, 100%, 37%);
+}
+.result-list li:nth-child(4) {
+    background: var(--cobalt-blue);
+    color: hsl(234, 85%, 45%);
+}
+
+.result-list li .result-icon {
+    display: flex;
+    gap: 5px;
+}
+
+.result-icon p {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.result-number {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dark-gray-blue);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 20px;
+    }
+    .card {
+        display: block;
+        width: 100%;
+    }
+    .card-left h3 {
+        font-size: 14px;
+    }
+    .attribution {
+        text-align: center;
+    }
+    .result {
+        width: 100px;
+        height: 100px;
+    }
+    .result p {
+        font-size: 28px;
+    }
+    .result span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .result-text h3 {
+        font-size: 24px;
+    }
+}
